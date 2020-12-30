@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-long long maxmum(long long num1, long long num2)
-{
-    return (num1 > num2 ) ? num1 : num2;
-}
+#define MAX(a, b) (((a > b)) ? (a) : (b))
+#define MIN(a, b) (((a < b)) ? (a) : (b))
+
 int main()
 {
 
@@ -39,7 +38,7 @@ int main()
         for(long long i=0; i<size; i++)
         {
             scanf("%lld",&x);
-            max=maxmum(max,x);
+            max=MAX(max,x);
 
         }
         printf("%lld",max);
